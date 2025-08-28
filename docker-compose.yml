@@ -1,0 +1,11 @@
+services:
+  frr-vtysh:
+    build: .
+    container_name: frr-vtysh
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    privileged: true
+    stdin_open: true
+    tty: true
+  
